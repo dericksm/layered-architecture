@@ -1,11 +1,12 @@
 package com.github.dericksm.model.response;
 
-import java.io.Serializable;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-public class BookDTO implements Serializable {
+@AllArgsConstructor
+public class BookResponse {
 
     private UUID id;
     private String title;
