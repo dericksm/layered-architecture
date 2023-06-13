@@ -1,6 +1,7 @@
 package com.github.dericksm.port;
 
 import com.github.dericksm.model.response.BookResponse;
+import com.github.dericksm.port.output.presenter.GetBookByAuthorAndTitlePresenter;
 import com.github.dericksm.port.output.presenter.GetBookByIdPresenter;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-public class GetBookByIdSpringRestPresenter implements GetBookByIdPresenter {
+public class GetBookByAuthorAndTitleSpringRestPresenter implements GetBookByAuthorAndTitlePresenter {
 
     private final HttpServletResponse httpServletResponse;
     private final MappingJackson2HttpMessageConverter jacksonConverter;

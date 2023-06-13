@@ -19,9 +19,10 @@
     <dependencies>
         <dependency>
             <groupId>com.github.dericksm</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>use-case</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

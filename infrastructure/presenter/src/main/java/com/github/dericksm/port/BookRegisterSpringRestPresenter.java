@@ -1,7 +1,7 @@
 package com.github.dericksm.port;
 
-import com.github.dericksm.model.Book;
-import com.github.dericksm.port.presenter.BookRegisterPresenter;
+import com.github.dericksm.model.response.BookResponse;
+import com.github.dericksm.port.output.presenter.BookRegisterPresenter;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
@@ -19,16 +19,15 @@ public class BookRegisterSpringRestPresenter implements BookRegisterPresenter {
     private final HttpServletResponse httpServletResponse;
     private final MappingJackson2HttpMessageConverter jacksonConverter;
 
-    //TODO REVIEW THE MODEL
     @Override
-    public void present(final Book book) {
+    public void present(final BookResponse bookResponse) {
         final DelegatingServerHttpResponse httpOutputMessage =
             new DelegatingServerHttpResponse(new ServletServerHttpResponse(httpServletResponse));
 
         httpOutputMessage.setStatusCode(HttpStatus.OK);
 
         try {
-            jacksonConverter.write(book, MediaType.APPLICATION_JSON, httpOutputMessage);
+            jacksonConverter.write(bookResponse, MediaType.APPLICATION_JSON, httpOutputMessage);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
