@@ -1,7 +1,6 @@
-package com.github.dericksm.port.persistence;
+package com.github.dericksm.port.output.persistence;
 
 import com.github.dericksm.model.Book;
-import java.util.UUID;
 
 public interface GetBookByAuthorAndTitlePersistence {
 
