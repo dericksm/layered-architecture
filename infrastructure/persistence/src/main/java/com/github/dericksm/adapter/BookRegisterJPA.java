@@ -1,8 +1,8 @@
-package com.github.dericksm.port;
+package com.github.dericksm.adapter;
 
 import com.github.dericksm.mapper.BookMapper;
 import com.github.dericksm.model.Book;
-import com.github.dericksm.port.persistence.BookRegisterPersistence;
+import com.github.dericksm.port.output.persistence.BookRegisterPersistence;
 import com.github.dericksm.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookRegisterJPA implements BookRegisterPersistence {
 
-    //TODO CHECK HOW TO NO LET THIS REPOSITOEY BE PUBLIC
     private final BookRepository bookRepository;
 
     @Override

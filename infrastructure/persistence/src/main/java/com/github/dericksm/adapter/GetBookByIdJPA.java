@@ -1,8 +1,8 @@
-package com.github.dericksm.port;
+package com.github.dericksm.adapter;
 
 import com.github.dericksm.mapper.BookMapper;
 import com.github.dericksm.model.Book;
-import com.github.dericksm.port.persistence.GetBookByIdPersistence;
+import com.github.dericksm.port.output.persistence.GetBookByIdPersistence;
 import com.github.dericksm.repository.BookRepository;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class GetBookByIdJPA implements GetBookByIdPersistence {
 
-    //TODO CHECK HOW TO NO LET THIS REPOSITOEY BE PUBLIC
     private final BookRepository bookRepository;
 
     @Override

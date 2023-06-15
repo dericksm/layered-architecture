@@ -1,7 +1,7 @@
-package com.github.dericksm.port;
+package com.github.dericksm.adapter;
 
 import com.github.dericksm.model.response.BookResponse;
-import com.github.dericksm.port.output.presenter.BookRegisterPresenter;
+import com.github.dericksm.port.output.presenter.GetBookByIdPresenter;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
@@ -12,9 +12,9 @@ import org.springframework.http.server.DelegatingServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.stereotype.Component;
 
-@Component
 @RequiredArgsConstructor
-public class BookRegisterSpringRestPresenter implements BookRegisterPresenter {
+@Component
+public class GetBookByIdSpringRestPresenter implements GetBookByIdPresenter {
 
     private final HttpServletResponse httpServletResponse;
     private final MappingJackson2HttpMessageConverter jacksonConverter;

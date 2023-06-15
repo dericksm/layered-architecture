@@ -1,4 +1,4 @@
-package com.github.dericksm.port;
+package com.github.dericksm.adapter;
 
 import com.github.dericksm.model.response.BookResponse;
 import com.github.dericksm.port.output.presenter.GetBookByAuthorAndTitlePresenter;
