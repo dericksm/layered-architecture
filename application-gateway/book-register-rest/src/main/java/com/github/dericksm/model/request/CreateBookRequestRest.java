@@ -1,14 +1,15 @@
 package com.github.dericksm.model.request;
 
 import jakarta.validation.constraints.NotBlank;
-import java.io.Serializable;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class CreateBookRequest implements Serializable {
+@NoArgsConstructor
+public class CreateBookRequestRest {
 
     @NotBlank
-    private String title;
-    @NotBlank
     private String author;
+    @NotBlank
+    private String title;
 }

@@ -1,10 +1,13 @@
 package com.github.dericksm.config;
 
-import com.github.dericksm.port.persistence.BookRegisterPersistence;
-import com.github.dericksm.port.persistence.GetBookByIdPersistence;
-import com.github.dericksm.port.presenter.BookRegisterPresenter;
-import com.github.dericksm.port.presenter.GetBookByIdPresenter;
+import com.github.dericksm.port.output.persistence.BookRegisterPersistence;
+import com.github.dericksm.port.output.persistence.GetBookByAuthorAndTitlePersistence;
+import com.github.dericksm.port.output.persistence.GetBookByIdPersistence;
+import com.github.dericksm.port.output.presenter.BookRegisterPresenter;
+import com.github.dericksm.port.output.presenter.GetBookByAuthorAndTitlePresenter;
+import com.github.dericksm.port.output.presenter.GetBookByIdPresenter;
 import com.github.dericksm.usecase.BookRegisterInteractor;
+import com.github.dericksm.usecase.GetBookAuthorAndTitleInteractor;
 import com.github.dericksm.usecase.GetBookByIdInteractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -26,6 +29,13 @@ public class BeanRestConfig {
     public BookRegisterInteractor bookRegisterInteractor(final BookRegisterPersistence bookRegisterPersistence,
         final BookRegisterPresenter bookRegisterPresenter) {
         return new BookRegisterInteractor(bookRegisterPersistence, bookRegisterPresenter);
+    }
+
+    @Bean
+    public GetBookAuthorAndTitleInteractor getBookAuthorAndTitleInteractor(
+        final GetBookByAuthorAndTitlePersistence getBookByAuthorAndTitlePersistence,
+        final GetBookByAuthorAndTitlePresenter getBookByAuthorAndTitlePresenter) {
+        return new GetBookAuthorAndTitleInteractor(getBookByAuthorAndTitlePersistence, getBookByAuthorAndTitlePresenter);
     }
 
 

@@ -23,7 +23,7 @@
     <dependencies>
         <dependency>
             <groupId>com.github.dericksm</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>use-case</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
