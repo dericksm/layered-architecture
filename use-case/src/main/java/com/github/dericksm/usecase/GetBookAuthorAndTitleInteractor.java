@@ -8,7 +8,7 @@ import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-class GetBookAuthorAndTitleInteractor {
+public class GetBookAuthorAndTitleInteractor {
 
     private final GetBookByAuthorAndTitlePersistence getBookByAuthorAndTitlePersistence;
     private final GetBookByAuthorAndTitlePresenter getBookByAuthorAndTitlePresenter;
