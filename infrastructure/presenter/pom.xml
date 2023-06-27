@@ -22,23 +22,23 @@
             <artifactId>use-case</artifactId>
             <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.1.0</version>
+            <artifactId>spring-boot-starter-json</artifactId>
+            <version>${spring-boot-starter.version}</version>
+            <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>3.1.0</version>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring-boot-starter.version}</version>
+            <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>3.1.0</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

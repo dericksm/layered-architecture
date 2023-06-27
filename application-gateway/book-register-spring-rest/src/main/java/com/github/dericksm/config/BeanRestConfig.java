@@ -16,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @EnableJpaRepositories("com.github.dericksm")
-@ComponentScan(basePackages = {"com.github.dericksm", "com.github.dericksm.port"})
+@ComponentScan(basePackages = {"com.github.dericksm", "com.github.dericksm.port", "com.github.dericksm.adapter"})
 public class BeanRestConfig {
 
     @Bean
