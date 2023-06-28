@@ -15,7 +15,7 @@ public class GetBookByIdInteractor {
     private final GetBookByIdPresenter getBookByIdPresenter;
 
     public void getById(final UUID uuid) {
-        var book = Optional.of(getBookByIdPersistence.getBookById(uuid)).orElseThrow(() -> new BookNotFoundException(uuid));
+        var book = Optional.ofNullable(getBookByIdPersistence.getBookById(uuid)).orElseThrow(() -> new BookNotFoundException(uuid));
         getBookByIdPresenter.present(new BookResponse(book.getId(), book.getTitle(), book.getAuthor()));
     }
 
